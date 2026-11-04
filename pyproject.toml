@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "incident-sim"
+version = "0.1.0"
+description = "Synthetic, seedable e-commerce incident data (metrics, logs, events, vendor status) for testing AI incident-response agents."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = []
+keywords = ["incident-response", "simulation", "agents", "sre", "testing", "magento"]
+
+[project.scripts]
+incident-sim = "incident_sim.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/incident_sim"]
